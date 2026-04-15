@@ -1,0 +1,10 @@
+node_modules/
+server/uploads/
+client/dist/
+data.db
+data.db-journal
+.jwt-secret
+.DS_Store
+.env
+.env.local
+*.log
