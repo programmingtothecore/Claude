@@ -3,6 +3,8 @@ server/uploads/
 client/dist/
 data.db
 data.db-journal
+data.db-shm
+data.db-wal
 .jwt-secret
 .DS_Store
 .env
