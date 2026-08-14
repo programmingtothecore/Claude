@@ -23,26 +23,28 @@ export default function Login() {
 
   return (
     <div className="form-page">
-      <h2>Sign in</h2>
+      <h2>Welcome back</h2>
       <form className="form" onSubmit={submit}>
         <label>
           <span>Email</span>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required autoFocus />
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required autoFocus placeholder="you@example.com" />
         </label>
         <label>
           <span>Password</span>
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required placeholder="Your password" />
         </label>
         {err && <div className="error">{err}</div>}
         <button className="btn primary" disabled={busy} type="submit">
-          {busy ? 'Signing in…' : 'Sign in'}
+          {busy ? 'Signing in...' : 'Sign in'}
         </button>
-        <p className="muted">New here? <Link to="/signup">Create a profile</Link>.</p>
-        <p className="hint">
-          Demo accounts (password <code>password123</code>):
+        <p className="muted center">New here? <Link to="/signup">Create a profile</Link></p>
+        <div className="hint">
+          <strong>Try a demo account</strong> &mdash; password: <code>password123</code>
           <br />
-          <code>mira@example.com</code>, <code>daniel@example.com</code>, <code>ayla@example.com</code>, <code>rafael@example.com</code>, and more — see <code>server/seed.js</code>.
-        </p>
+          <span className="muted small">
+            mira@example.com, daniel@example.com, ayla@example.com, rafael@example.com
+          </span>
+        </div>
       </form>
     </div>
   );

@@ -5,7 +5,7 @@ export default function ProfileCard({ user }) {
     <Link to={`/u/${user.id}`} className="profile-card">
       <div className="profile-card-photo">
         {user.primary_photo ? (
-          <img src={`/uploads/${user.primary_photo}`} alt={user.display_name} />
+          <img src={`/uploads/${user.primary_photo}`} alt={user.display_name} loading="lazy" />
         ) : (
           <div className="no-photo">No photo</div>
         )}
